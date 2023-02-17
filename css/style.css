@@ -1,0 +1,256 @@
+/* https://techbrij.com/css-selector-adjacent-child-sibling */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body{
+    padding: 2px;
+    margin: 0;
+    background-image: url("../img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Press Start 2P', cursive;
+    box-sizing:border-box  
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+/*Seccion para elegir mascota*/
+
+#secction-mascotas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+
+}
+.tarjetas{
+    display: flex;
+    gap: 10px;
+    
+}
+.tarjeta-mokepon{
+    width: 150px;
+    height: 150px;
+    background-color: #C9F4AA;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+
+
+}
+.tarjetas img{
+    height: 100px;
+    width: 100px;
+}
+.tarjeta-mokepon:hover{
+    cursor: pointer;
+    width: 180px;
+    height: 180px;
+    background-color: #75ff75;
+}
+/* A CSS selector that selects the label element that is immediately preceded by the input element with
+the id of chikorita, square, or sharizard that is a descendant of the element with the class of
+tarjetas. */
+.tarjetas #chikorita:checked+label,
+.tarjetas #square:checked+label,
+.tarjetas #sharizard:checked+label { /* cuando se seleccione me cambie los atributos de la tarjeta*/
+
+    cursor: pointer;
+    width: 180px;
+    height: 180px;
+    background-color: #75ff75;
+
+
+}
+.tarjetas #chikorita:checked+label img,
+.tarjetas #square:checked+label img,
+.tarjetas #sharizard:checked+label img { /* cuando se seleccione la imagen aumente*/
+        height: 250px;
+        width: 150px;
+
+}
+input, radio{
+    display: none;
+}
+
+#boton-mascota{
+    background-color: #C9F4AA;
+    color: black;
+    margin-top: 50px;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    box-shadow: 10px 5px 5px gray;
+    font-family: 'Press Start 2P', cursive;
+
+}
+
+/*Seccion de los ataques*/
+
+#secction-ataque{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-ataque{
+    background-color: #C9F4AA;
+    color: black;
+    margin-top: 50px;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    box-shadow: 10px 5px 5px gray;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.div-ataque{
+    display: flex;
+    
+}
+.div-ataque~div{      
+    display: flex;
+    margin-top: 50px;
+}
+.div-recuadro-mascota{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.div-ataques{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 1;
+}
+.div-recuadro-mascota-enemigo{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.div-ataques-enemigos{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 2;
+}
+
+/*.div-ataque~div div{ */
+.div-mascota-p{     
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 10px 58px 0px 58px;
+    box-sizing: border-box;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    background: rgb(245,245,245);
+    background: linear-gradient(0deg, rgba(19,19,19,0.1558998599439776) 0%, rgba(126,126,126,0.49763655462184875) 100%);
+
+}
+.imagen-mascota{
+    width: 100px;
+    height: 100px;
+
+}
+.imagen-vidas{
+    width: 74px;
+    height: 22px;
+    margin-top: 10px;
+
+}
+.imagen-corona{
+    width: 20px;
+    height: 18px;
+    margin-top: 10px;
+
+}
+.corona-enemigo{
+    display: flex;
+    flex-direction: row;
+}
+.div-vs{
+    display: flex;
+    align-items: center;
+
+}
+#vs{
+    width: 100px;
+    height: 80px;
+    margin-top: 10px;
+}
+.mascota{
+    grid-column: 2;
+    margin-left: 0;
+}
+.mascota-enemigo{
+    grid-column: 1;
+    margin-right: 0;
+}
+
+/*Seccion de los mensajes*/
+/* Centering the text in the div. */
+#secction-mensaje{
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Setting the height of the div to 10em and making it scrollable. */
+.div-mensaje{
+    height: 10em;
+    overflow-x: hidden; 
+    overflow-y: auto;
+}
+
+.canvas{
+    border: 2px solid white;
+}
+#secction-canvas{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.botones-mapa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn-mover{
+    width: 50px;
+    margin: 5px;
+}
+
+/* A media query. It is a CSS rule that allows you to apply styles to a page when a certain condition
+is met. In this case, the condition is that the width of the viewport is 540px or less. */
+@media (max-width:540px){
+    .tarjetas, .div-ataque~div, .div-ataque{
+        flex-direction: column;
+    }
+    .div-vs{
+        justify-content: center;
+    }
+    .div-ataque{
+        display: flex;
+
+    }
+    .button-ataque{
+        margin-top: 20px;
+    }
+}
+
+@media(max-width:360px){
+    .botones-mapa div{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}

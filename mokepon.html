@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOKEPON!</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section id="secction-mascotas">
+        <h1>MOKEPON</h1>
+        <div id= "div-tarjetas" class="tarjetas">
+
+        </div>
+        <button id="boton-mascota">Seleccionar</button>
+    </section>
+    <section id="secction-canvas">
+        <h1>MOKEPON</h1>
+        <canvas id="mapa" class="canvas"></canvas>
+        <div class="botones-mapa">
+            <button class="btn-mover" onmouseup="detenerMovimiento()" onmousedown="moverArriba()">⬆</button>
+            <div style="display: flex;">
+                <button class="btn-mover" onmouseup="detenerMovimiento()" onmousedown="moverIsquierda()">⬅</button>
+                <button class="btn-mover" onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">⬇</button>
+                <button class="btn-mover" onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">➡</button>
+            </div>
+
+        </div>
+        
+    </section>
+    <section id="secction-ataque">
+        <h1>MOKEPON</h1>
+        <h2>Elige tu ataque</h2>
+        <div id="div-ataque" class="div-ataque">
+        </div>
+        <div>
+            <div class="div-recuadro-mascota">
+                <div id="div-ataques" class="div-ataques">
+                </div>
+                <div class="div-mascota-p mascota">
+                    <img src="" alt="mokepon" class="imagen-mascota" id="imagen-mimascota">
+                    <div class = "corona-enemigo" id="div-corona">
+                    </div>
+                </div>
+            </div>
+            <div class="div-vs">
+                <img src="./img/vs.png" alt="vs" id="vs">
+            </div>
+            <div class="div-recuadro-mascota-enemigo">
+                <div class="div-mascota-p mascota-enemigo">
+                    <img src="" alt="mokepon" class="imagen-mascota" id="imagen-lamascota">
+                    <div class = "corona-enemigo" id="div-coronaE">
+                    </div>
+                </div> 
+                <div id="div-ataqueE" class="div-ataques-enemigos">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="secction-mensaje">
+        <div class="div-mensaje" id="div-mensaje">
+
+        </div>
+    </section>
+    <section id="secction-final">
+        <button id="button-reiniciar">reiniciar</button>
+    </section>
+    <script src="./js/mokepon.js" defer></script>
+</body>
+</html>
