@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DANICAMI11/game/issues"
   },
-  "homepage": "https://github.com/DANICAMI11/game#readme"
+  "homepage": "https://github.com/DANICAMI11/game#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
